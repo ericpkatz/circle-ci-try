@@ -8,18 +8,13 @@ jobs:
       - image: circleci/node
         environment:
           DATABASE_URL: postgresql://postgres@localhost/circle_test
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
 
 
     # Service container image
       - image: circleci/postgres
         environment:
           POSTGRES_USER: postgres
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+          POSTGRES_PASSWORD: postgres
 
 
     steps:
