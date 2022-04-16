@@ -17,3 +17,4 @@ jobs:
     steps:
       - checkout
       - run: npm i 
+      - run : npm test
