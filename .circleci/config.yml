@@ -5,12 +5,12 @@ jobs:
 
     # Primary container image where all commands run
     docker:
-      - image: cimg/node
+      - image: circleci/node
         environment:
           TEST_DATABASE_URL: postgresql://postgres@localhost/circle_test
 
     # Service container image
-      - image: cimg/postgres
+      - image: circleci/postgres
         environment:
           POSTGRES_USER: postgres
 
