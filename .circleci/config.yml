@@ -13,6 +13,10 @@ jobs:
       - image: circleci/postgres
         environment:
           POSTGRES_USER: postgres
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+
 
     steps:
       - checkout
